@@ -73,6 +73,10 @@
         margin: 64px 0 32px;
     }
 
+    .topRow button {
+        align-self: flex-start;
+    }
+
     .column{
         border-bottom: 1px solid #EDEDED;
         padding-bottom: 32px;
