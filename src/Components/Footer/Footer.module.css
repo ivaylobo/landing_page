@@ -6,6 +6,7 @@
     margin: 82px 0 100px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 .bottomRow {
     display: flex;
@@ -71,10 +72,6 @@
     .topRow{
         gap: 32px;
         margin: 64px 0 32px;
-    }
-
-    .topRow button {
-        align-self: flex-start;
     }
 
     .column{
