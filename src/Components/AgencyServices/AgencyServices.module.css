@@ -1,0 +1,110 @@
+.agencyServices {
+    margin-bottom: 120px;
+}
+
+.wrapper h2 {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.itemsMenu {
+    width: 520px;
+    border-top: 1px solid #ccc;
+}
+
+.menuItem {
+    border-bottom: 1px solid #ccc;
+    padding: 24px 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menuItem.active {
+    background: #EDEDED;
+    color: #1C73A8;
+    margin: -5px 0;
+    z-index: 1;
+    border-radius: 5px;
+    border: none;
+}
+
+.menuItem.active .description{
+    padding-top: 24px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.summary:hover {
+    color: #1C73A8;
+}
+
+.arrowIcon {
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #000;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.fadeIn {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.fadeOut {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.imgContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 980px) {
+    .contentWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgContainer {
+        order: 1;
+    }
+
+    .itemsMenu {
+        order: 2;
+        max-width: 100%;
+    }
+}

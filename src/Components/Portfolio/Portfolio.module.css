@@ -1,0 +1,130 @@
+.wrapper{
+    position: relative;
+    padding-bottom: 64px;
+    margin-bottom: 62px;
+}
+
+.wrapper:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 330px;
+    height: 2px;
+    background: #00BAFF;
+    left: 50%;
+    margin-left: -165px;
+    bottom: 0;
+}
+
+.items li{
+    align-items: center;
+}
+
+.details,
+.itemWrapper .imgContainer {
+    flex: 1 1 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.items li:nth-child(odd) .details{
+    padding-right: 119px;
+}
+.imgContainer img{
+    max-width: 100%;
+}
+.details h3{
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.details h3:before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 330px;
+    height: 2px;
+    background: #00BAFF;
+    right: 0;
+    bottom: 0;
+
+}
+
+.details p{
+    margin: 32px 0;
+}
+
+.items li:nth-child(even){
+    direction: rtl;
+}
+
+.items li:nth-child(even) .details{
+    text-align: left;
+    padding-left: 119px;
+}
+
+
+.items li:nth-child(even) .details h3:before{
+    right: auto;
+    left: 0;
+}
+
+.itemWrapper{
+    display: flex;
+}
+
+@media all and (max-width: 980px) {
+    .wrapper{
+        padding-bottom: 31px;
+        margin-bottom: 32px;
+    }
+    .itemWrapper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 31px;
+    }
+    .imgContainer{
+        margin-bottom: 32px;
+        order: 1;
+    }
+    .details{
+        order: 2;
+    }
+
+    .items li{
+        gap: 0;
+    }
+    .items li:nth-child(even){
+        direction: ltr;
+        text-align: left;
+    }
+    .items li:nth-child(even) .details h3:before{
+        right: auto;
+        left: 0;
+    }
+    .items li:nth-child(odd) .details, .items li:nth-child(even) .details{
+        padding-left: 0;
+        padding-right: 0;
+        text-align: left;
+    }
+    .details h3:before{
+        right: auto;
+        left: 0;
+    }
+    .wrapper:after{
+        width: 100%;
+        margin: 0;
+        left: 0;
+    }
+}
+@media all and (max-width: 640px) {
+    .details,
+    .itemWrapper .imgContainer {
+        max-width: 100%;
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+}
+

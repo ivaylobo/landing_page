@@ -1,0 +1,141 @@
+/* Header.module.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+    position: relative;
+}
+
+.logoContainer img {
+    width: 230px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 56px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.menu li {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    line-height: 30px;
+}
+
+.menu li:hover {
+    color: #0073e6;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .logoContainer {
+        padding: 20px 0;
+    }
+}
+@media (max-width: 1180px) {
+    .menu {
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .logoContainer img{
+        width: 200px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 110px;
+        right: 0;
+        background: white;
+        padding: 0 70px 32px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        width: 100%;
+        box-shadow: 0px -2px 4px 0px rgba(100, 100, 100, 0.2);
+        gap: 0;
+    }
+
+    .menu li{
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #EDEDED;
+        padding: 32px 0;
+    }
+
+    .menuOpen {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px; /* Ширина на бутона */
+        height: 32px; /* Височина на бутона */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+    }
+
+    .bar {
+        width: 100%; /* Ширина на всяка лента */
+        height: 5px; /* Дебелина на всяка лента */
+        background-color: #646464;
+        transition: all 0.3s ease;
+        position: relative; /* За правилно позициониране */
+    }
+
+    /* Горната черта */
+    .bar:nth-child(1) {
+        transform: none; /* Без трансформации в затворено състояние */
+    }
+
+    /* Средната черта */
+    .bar:nth-child(2) {
+        opacity: 1; /* Уверете се, че е видима */
+    }
+
+    /* Долната черта */
+    .bar:nth-child(3) {
+        transform: none; /* Без трансформации в затворено състояние */
+    }
+
+    /* Анимация за отворено меню */
+    .hamburgerOpen .bar:nth-child(1) {
+        transform: translateY(13px) rotate(45deg); /* Ротация за горната черта */
+    }
+
+    .hamburgerOpen .bar:nth-child(2) {
+        opacity: 0; /* Скриване на средната черта */
+    }
+
+    .hamburgerOpen .bar:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg); /* Ротация за долната черта */
+    }
+}

@@ -1,0 +1,53 @@
+.wrapper {
+    align-items: center;
+    margin: 96px 0 98px;
+    text-align: center;
+}
+
+.items{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.items li{
+    max-width: 250px;
+}
+
+.items h4{
+    max-width: 140px;
+    margin: 22px auto;
+    height: 56px;
+}
+
+.check{
+    width: 59px;
+}
+
+.sign{
+    width: 25px;
+    margin-bottom: 30px;
+}
+
+.inTouch{
+    margin-top: 64px;
+}
+
+@media screen and (max-width: 980px){
+    .items{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .items li{
+        margin-bottom: 64px;
+    }
+
+    .inTouch{
+        margin-top: 0;
+    }
+
+    .wrapper{
+        margin: 64px 0;
+    }
+}
